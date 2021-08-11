@@ -5,28 +5,29 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import lombok.Builder;
+import lombok.Builder.Default;
 import one.digitalinnovation.beerstock.dto.BeerDTO;
 import one.digitalinnovation.beerstock.enums.BeerType;
 
 @Builder
 public class BeerDTOBuilder {
 
-    @Builder.Default
+    @Default
     private Long id = 1L;
 
-    @Builder.Default
+    @Default
     private String name = "Brahma";
 
-    @Builder.Default
+    @Default
     private String brand = "Ambev";
 
-    @Builder.Default
+    @Default
     private int max = 50;
 
-    @Builder.Default
+    @Default
     private int quantity = 10;
 
-    @Builder.Default
+    @Default
     private BeerType type = BeerType.LAGER;
 
     public BeerDTO toBeerDTO() {
@@ -37,4 +38,6 @@ public class BeerDTOBuilder {
                 quantity,
                 type);
     }
+
+
 }

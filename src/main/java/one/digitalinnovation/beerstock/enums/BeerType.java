@@ -15,5 +15,6 @@ public enum BeerType {
     IPA("IPA"),
     STOUT("Stout");
 
+
     private final String description;
 }
